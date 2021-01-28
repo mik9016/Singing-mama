@@ -1,10 +1,13 @@
 import React from 'react';
 import classes from './Home.module.scss';
-import { Link } from 'react-router-dom';
-import changeNavColorBlack from './Navigation'
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react'
+
 
 export default function Home() {
 
+    
+    
 
     return (
     <div className={classes.Home}>
@@ -16,7 +19,12 @@ export default function Home() {
                 Make your child sensitive to music from the very beginning.
             </p>
             
-            <Link to='/about' type="button" class="btn btn-outline-primary" onClick={changeNavColorBlack}>Learn More</Link>           
+            <NavLink to={{
+                pathname:'/about',
+                aboutProps:{
+                    navColor: 'navbar fixed-top navbar-light'
+                }
+            }} type="button" className="btn btn-outline-primary" >Learn More</NavLink>           
         
 
         </main>

@@ -1,14 +1,17 @@
 
-import React from 'react'
 import classes from './About.module.scss';
 import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
+
 // import { Button } from 'bootstrap';
 
-export default function About() {
+export default function About(props) {
+  
 
+    // console.log("about", props.location.aboutProps)
 
     return (
+        
         <div className={classes.About}>
             <div className={classes.divek}>
             <h1>About</h1><br/>
