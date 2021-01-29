@@ -14,31 +14,33 @@ import { withRouter } from "react-router";
 
 
 function App(props) {
+  const [navStyle, setNavstate] = useState('navbar fixed-top navbar-dark')
 
-  // const [navStyle, setNavstyle] = useState('navbar fixed-top navbar-dark')
+  function changeNavColorBlack() {
+    setNavstate('navbar fixed-top navbar-light')
+  }
   
-  
-
-  // function changeNavColorWhite() {
-
-  //   setNavstate('navbar fixed-top navbar-dark')
-  // }
-// const navColorWhite= 'navbar fixed-top navbar-dark'
-// const navColorBlack= 'navbar fixed-top navbar-light'
+  function changeNavColorWhite() {
+    setNavstate('navbar fixed-top navbar-dark')
+  }
 
   return (
     <Router>
       <div>
-        <Navigation/>
+      <Navigation changeNavColorBlack={changeNavColorBlack}
+              changeNavColorWhite={changeNavColorWhite}
+              navStyle={navStyle}
+              setNavstate={setNavstate}/>
         <Switch>
         <Route exact path="/">
             <Redirect to="/home"/>
           </Route>
           <Route path='/home'>
-            <Home/>
+          <Home changeNavColorBlack={changeNavColorBlack}
+              changeNavColorWhite={changeNavColorWhite}/>
           </Route>
           <Route path='/about'>
-            <About/>
+            <About changeNavColorBlack={changeNavColorBlack}/>
           </Route>
           <Route path='/pricing'>
             <Pricing/>

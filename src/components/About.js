@@ -7,8 +7,8 @@ import { Button } from 'react-bootstrap'
 
 export default function About(props) {
   
-
-    // console.log("about", props.location.aboutProps)
+    
+  
 
     return (
         
@@ -28,7 +28,13 @@ export default function About(props) {
             
             </div>
 
-            <br/> <Button className={classes.but} variant="outline-primary" as={Link} to='/pricing'>Check Our Offer</Button>
+            <br/> 
+            <Button 
+            className={classes.but} 
+            variant="outline-primary" 
+            as={Link} to='/pricing' 
+            onClick={props.changeNavColorBlack}>
+            Check Our Offer</Button>
         </div>
     )
 }
