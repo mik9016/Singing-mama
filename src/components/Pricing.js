@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Pricing.module.scss'
 import Cards from './Cards'
+import { NavLink } from 'react-router-dom';
 
 export default function Pricing() {
     return (
@@ -26,7 +27,7 @@ export default function Pricing() {
           <li>Email support</li>
           <li>Help center access</li>
         </ul>
-        <button type="button" className="w-100 btn btn-outline-primary">Add to card</button>
+        <NavLink to='/kontakt' type="button" className="w-100 btn btn-outline-primary">Take a lesson</NavLink>
       </div>
       
     </div>
@@ -44,7 +45,7 @@ export default function Pricing() {
           <li>Priority email support</li>
           <li>Help center access</li>
         </ul>
-        <button type="button" className="w-100 btn btn-outline-primary">Add to card</button>
+        <NavLink to='/kontakt' type="button" className="w-100 btn btn-outline-primary">Take a lesson</NavLink>
       </div>
     </div>
     </div>
@@ -61,7 +62,7 @@ export default function Pricing() {
           <li>Phone and email support</li>
           <li>Help center access</li>
         </ul>
-        <button type="button" className="w-100 btn btn-outline-primary">Add to card</button>
+        <NavLink to='/kontakt' type="button" className="w-100 btn btn-outline-primary">Take a lesson</NavLink>
       </div>
     </div>
     </div>

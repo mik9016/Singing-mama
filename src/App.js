@@ -7,6 +7,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Pricing from './components/Pricing';
 import Kontakt from './components/Kontakt';
+import Footer from './components/Footer';
 import { useState, useEffect } from 'react';
 import {useLocation} from 'react-router-dom';
 import PropTypes from "prop-types";
@@ -46,14 +47,14 @@ function App(props) {
             <Pricing/>
           </Route>
           <Route path='/kontakt'>
-            <Kontakt/>
+            <Kontakt changeNavColorBlack={changeNavColorBlack}/>
           </Route>
           <Route path='/login'>
-            <Login/>
+            <Login changeNavColorBlack={changeNavColorBlack}/>
           </Route>
 
         </Switch>
-       
+       <Footer/>
       </div>
     </Router>
 

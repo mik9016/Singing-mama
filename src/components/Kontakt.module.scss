@@ -1,0 +1,31 @@
+@import './Mixins.scss';
+.Kontakt{
+    // @include backgroundPicture;
+    // background-image: url('../assets/belly.jpg');
+    // display: flex;
+    // align-items: center;
+    // justify-content: right;
+    background-image: url('../assets/together.jpg');
+    height: 100vh;
+    background-size:100vh ;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x:left ;
+  
+    h1{
+        text-align: center;
+        margin: 16px;
+    }
+
+    input{
+        align-items: center;
+        margin: 8px;
+        width: 32vw;
+    }
+ 
+    textarea{
+        width: 32vw;
+        height:16vh;
+        margin: 32px;
+    }
+}

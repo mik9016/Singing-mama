@@ -14,7 +14,7 @@ const Navigation = (props) => {
     return (
         <div className={classes.Navigation}>
     <Navbar className={props.navStyle}>
-      <Navbar.Brand as={Link} to="/home" >Singing-Mama</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/home" onClick={props.changeNavColorWhite}>Singing-Mama</Navbar.Brand>
       <Nav className="mr-auto">
       <Nav.Link as={Link} to="/home" onClick={props.changeNavColorWhite} >Home</Nav.Link>
       <Nav.Link as={Link} to="/about" onClick={props.changeNavColorBlack}>About</Nav.Link>
