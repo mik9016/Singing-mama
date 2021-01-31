@@ -21,6 +21,7 @@ const Navigation = (props) => {
       <Nav.Link as={Link} to="/pricing" onClick={props.changeNavColorBlack}>Pricing</Nav.Link>
       <Nav.Link as={Link} to="/kontakt"onClick={props.changeNavColorBlack}>Kontakt</Nav.Link>
       <Nav.Link as={Link} to="/login" onClick={props.changeNavColorBlack}>Login</Nav.Link>
+      {/* <Nav.Link as={Link} to="/payment" onClick={props.changeNavColorBlack}>Payment</Nav.Link> */}
     </Nav>
             
   </Navbar>

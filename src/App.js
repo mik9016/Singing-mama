@@ -8,6 +8,7 @@ import About from './components/About';
 import Pricing from './components/Pricing';
 import Kontakt from './components/Kontakt';
 import Footer from './components/Footer';
+import Payment from './components/Payment';
 import { useState, useEffect } from 'react';
 import {useLocation} from 'react-router-dom';
 import PropTypes from "prop-types";
@@ -16,6 +17,9 @@ import { withRouter } from "react-router";
 
 function App(props) {
   const [navStyle, setNavstate] = useState('navbar fixed-top navbar-dark')
+  const priceItem1 = '10';
+  const priceItem2 = '20';
+  const priceItem3 = '30';
 
   function changeNavColorBlack() {
     setNavstate('navbar fixed-top navbar-light')
@@ -24,6 +28,8 @@ function App(props) {
   function changeNavColorWhite() {
     setNavstate('navbar fixed-top navbar-dark')
   }
+
+  
 
   return (
     <Router>
@@ -43,14 +49,17 @@ function App(props) {
           <Route path='/about'>
             <About changeNavColorBlack={changeNavColorBlack}/>
           </Route>
-          <Route path='/pricing'>
-            <Pricing/>
+          <Route path='/pricing'> 
+            <Pricing priceItem1={priceItem1} priceItem2={priceItem2} priceItem3={priceItem3}/>
           </Route>
           <Route path='/kontakt'>
             <Kontakt changeNavColorBlack={changeNavColorBlack}/>
           </Route>
           <Route path='/login'>
             <Login changeNavColorBlack={changeNavColorBlack}/>
+          </Route>
+          <Route path='/payment'>
+            <Payment changeNavColorBlack={changeNavColorBlack} price={priceItem2}/>
           </Route>
 
         </Switch>
