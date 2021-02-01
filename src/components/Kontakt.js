@@ -3,7 +3,7 @@ import classes from './Kontakt.module.scss'
 import { Card, Form, Modal, Alert} from 'react-bootstrap'
 import firebase from '../firebase'
 import {NavLink} from 'react-router-dom'
-import env from 'react-dotenv'
+
 
 
 export default function Kontakt(props) {
@@ -27,12 +27,10 @@ export default function Kontakt(props) {
 
     const msgInput = useRef(null);
     const optionInput = useRef(null)
-    //poprawic
-    function handleShowDate(){ 
-            
-            setShowDate(true)
-        
-        }
+    
+    function handleShowDate(){            
+            setShowDate(true)      
+    }
 
     function handleVornameInput(e) {
         setVorname(e.target.value)
@@ -111,14 +109,21 @@ export default function Kontakt(props) {
             <Form style={{display:"flex",flexDirection:"row-reverse",alignItems:"center", justifyContent:"right"}} onChange={validateForm}>
                 <Card style={{margin:"64px",display:"flex",alignItems:"center", justifyContent:"right", width:"35vw", border:"none" }}>
                     <Card.Body style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-                        <h1>Contact Us</h1>
-                        
+                        <h1>Termin vereinbaren</h1>
+                        <h3>{props.item}</h3>
+                        <h3>{props.priceItem}</h3>
                         <input id='vorname' type="text" className="form-control" placeholder="Vorname" aria-label="Vorname"  onChange={handleVornameInput} required/>
                         <input id='name' type="text" className="form-control" placeholder="Nachname" aria-label="Nachname" onChange={handleNameInput} required/>
                        
                         <input id='email' type="email" className="form-control" placeholder="E-Mail" aria-label="E-mail" onChange={handleEmailInput} required/>
                         <Form.Group controlId="exampleForm.ControlSelect1">
-                            <Form.Control ref={optionInput} as="select" aria-required style={{margin: "8px", width:"32vw"}} onChange={handleOptionInput} onClick={handleShowDate}>
+                            <Form.Control ref={optionInput} as="select" aria-required style={{margin: "8px", width:"32vw"}} 
+                            onChange={(e) => {
+                                handleOptionInput(e); 
+                                if(e.target.value === 'Terminvereinbarung')
+                                {handleShowDate()}
+                                else
+                                {setShowDate(false)} }} >
                             <option>Auswahl</option>
                             <option id='Terminvereinbarung' >Terminvereinbarung</option>
                             <option id='Allgemeine Frage'>Allgemeine Frage</option>

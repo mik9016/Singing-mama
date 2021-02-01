@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 
 export default function Pricing(props) {
 
-
     return (
         <div className={classes.Pricing}>
        
@@ -29,7 +28,13 @@ export default function Pricing(props) {
           <li>Email support</li>
           <li>Help center access</li>
         </ul>
-        <NavLink to='/kontakt' type="button" className="w-100 btn btn-outline-primary">Termin Vereinbaren</NavLink>
+        <NavLink to='/kontakt' type="button" className="w-100 btn btn-outline-primary" 
+        onClick={
+            props.setItemName,
+            props.setItemPrice  
+        }>
+          Termin Vereinbaren
+        </NavLink>
       </div>
       
     </div>

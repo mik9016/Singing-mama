@@ -10,9 +10,7 @@ import Kontakt from './components/Kontakt';
 import Footer from './components/Footer';
 import Payment from './components/Payment';
 import { useState, useEffect } from 'react';
-import {useLocation} from 'react-router-dom';
-import PropTypes from "prop-types";
-import { withRouter } from "react-router";
+
 
 
 function App(props) {
@@ -29,7 +27,12 @@ function App(props) {
     setNavstate('navbar fixed-top navbar-dark')
   }
 
-  
+  function setItemName() {
+
+  }
+  function setItemPrice(){
+
+  }
 
   return (
     <Router>
@@ -53,13 +56,18 @@ function App(props) {
             <Pricing priceItem1={priceItem1} priceItem2={priceItem2} priceItem3={priceItem3}/>
           </Route>
           <Route path='/kontakt'>
-            <Kontakt changeNavColorBlack={changeNavColorBlack}/>
+            <Kontakt 
+              changeNavColorBlack={changeNavColorBlack}
+/>
           </Route>
           <Route path='/login'>
             <Login changeNavColorBlack={changeNavColorBlack}/>
           </Route>
           <Route path='/payment'>
-            <Payment changeNavColorBlack={changeNavColorBlack} price={priceItem2}/>
+            <Payment 
+              changeNavColorBlack={changeNavColorBlack} 
+              price={priceItem2}
+              />
           </Route>
 
         </Switch>
