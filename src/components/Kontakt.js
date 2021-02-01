@@ -3,10 +3,7 @@ import classes from './Kontakt.module.scss'
 import { Card, Form, Modal, Alert} from 'react-bootstrap'
 import firebase from '../firebase'
 import {NavLink} from 'react-router-dom'
-
-
-
-
+import env from 'react-dotenv'
 
 
 export default function Kontakt(props) {
@@ -93,6 +90,7 @@ export default function Kontakt(props) {
 
         }
         contactFormRef.push(formReadyToSend)
+        console.log('message sent to Database')
         
     }
 
