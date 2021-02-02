@@ -7,13 +7,14 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const Navigation = (props) => {
  
-
+ 
 
     return (
-        <div className={classes.Navigation}>
-    <Navbar className={props.navStyle}>
+        <div className={classes.Navigation}  >
+    <Navbar className={props.navStyle} variant={props.variant} >
       <Navbar.Brand as={Link} to="/home" onClick={props.changeNavColorWhite}>Singing-Mama</Navbar.Brand>
       <Nav className="mr-auto">
       <Nav.Link as={Link} to="/home" onClick={props.changeNavColorWhite} >Home</Nav.Link>

@@ -15,6 +15,7 @@ export default function Kontakt(props) {
     const [message, setMessage] = useState('');
     const [error, setError] = useState('')
     const [date, setDate] = useState('');
+    const [paket, setPaket] = useState('');
     const [showModal, setShow] = useState(false);
     const [showDate, setShowDate] = useState(false)
     const [toPayment, setToPayment] = useState('/kontakt')
@@ -31,6 +32,9 @@ export default function Kontakt(props) {
     function handleShowDate(){            
             setShowDate(true)      
     }
+    function handlePaketValue(e){            
+        setPaket(e.target.value)
+}
 
     function handleVornameInput(e) {
         setVorname(e.target.value)
@@ -75,6 +79,8 @@ export default function Kontakt(props) {
         handleShow()
     }
 
+   
+
 
     function sendContactForm() {
         const contactFormRef = firebase.database().ref('ContactForm');
@@ -84,6 +90,7 @@ export default function Kontakt(props) {
             email,
             option,
             date,
+            paket,
             message
 
         }
@@ -124,7 +131,7 @@ export default function Kontakt(props) {
                                 {handleShowDate()}
                                 else
                                 {setShowDate(false)} }} >
-                            <option>Auswahl</option>
+                            <option>Ziel</option>
                             <option id='Terminvereinbarung' >Terminvereinbarung</option>
                             <option id='Allgemeine Frage'>Allgemeine Frage</option>
                             </Form.Control>
@@ -133,6 +140,18 @@ export default function Kontakt(props) {
                             <label>Termin:</label>
                             <input id="date" type='date'className="form-control" onChange={handleDateInput} required/>
                         </div> : null}
+
+                        <Form.Group controlId="exampleForm.ControlSelect1">
+                            <Form.Control  as="select" aria-required style={{margin: "8px", width:"32vw"}} 
+                            onChange={(e) => {
+                                handlePaketValue(e); 
+                                 }} >
+                            <option>Pakiet</option>
+                            <option  >{props.pricePackage1} </option>
+                            <option  > {props.pricePackage2}</option>
+                            <option  > {props.pricePackage3}</option>
+                            </Form.Control>
+                        </Form.Group>
 
                         <textarea id='message' ref={msgInput} type="text" placeholder="Your Message" onChange={handleMessageInput} /> 
                         {error && <Alert variant="danger">{error}</Alert>}
@@ -167,6 +186,7 @@ export default function Kontakt(props) {
                                             name &&
                                             email &&
                                             message &&
+                                            paket &&
                                             option
                                             !== '' ){
                                                     

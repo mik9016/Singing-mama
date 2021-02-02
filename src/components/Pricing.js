@@ -1,6 +1,5 @@
 import React from 'react'
 import classes from './Pricing.module.scss'
-import Cards from './Cards'
 import { NavLink } from 'react-router-dom';
 
 export default function Pricing(props) {
@@ -14,7 +13,7 @@ export default function Pricing(props) {
     <p className="lead">We offer safe online lessons to make your child sensible to sounds from the very first moments. Pick the package right for you.</p>
   </div>
 
-  <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
+  <div className="row row-cols-1 row-cols-md-3 mb-3 text-center" >
     <div className="col">
       <div className="card mb-4 shadow-sm">
       <div className="card-header">
@@ -28,13 +27,7 @@ export default function Pricing(props) {
           <li>Email support</li>
           <li>Help center access</li>
         </ul>
-        <NavLink to='/kontakt' type="button" className="w-100 btn btn-outline-primary" 
-        onClick={
-            props.setItemName,
-            props.setItemPrice  
-        }>
-          Termin Vereinbaren
-        </NavLink>
+
       </div>
       
     </div>
@@ -52,7 +45,7 @@ export default function Pricing(props) {
           <li>Priority email support</li>
           <li>Help center access</li>
         </ul>
-        <NavLink to='/kontakt' type="button" className="w-100 btn btn-outline-primary">Termin Vereinbaren</NavLink>
+        
       </div>
     </div>
     </div>
@@ -69,10 +62,15 @@ export default function Pricing(props) {
           <li>Phone and email support</li>
           <li>Help center access</li>
         </ul>
-        <NavLink to='/kontakt' type="button" className="w-100 btn btn-outline-primary">Termin Vereinbaren</NavLink>
+       
       </div>
     </div>
+
     </div>
+    <div className={classes.Container}>
+    
+    </div>
+    <NavLink to='/kontakt' type="button" className="w-25 btn btn-outline-primary" >Termin Vereinbaren</NavLink>
   </div>
 
  

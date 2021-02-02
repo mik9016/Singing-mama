@@ -3,14 +3,9 @@
 }
 @media screen and (max-width: 760px) {
     .Navigation {
-  background-color: white;
-  background-image: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  
+        min-width: 460px;
+        
+    
   
     }
   }

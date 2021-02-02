@@ -8,6 +8,7 @@
   display: grid;
   justify-content: right;
   align-items: center;
+  
 
   main{
     display: flex;
@@ -29,13 +30,26 @@
 
 @media screen and (max-width: 760px) {
   .Home {
-background-color: white;
+background-color: #20232A;
+color: white;
 background-image: none;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-
+flex-wrap: nowrap;
+min-width: 401px;
+height: 100vh;
+h1{
+  min-width: 380px;
+  padding: 0 16px ;
+}
+p{
+  min-width: 380px;
+  margin-bottom: 32px;
+  padding: 16px 16px ;
+}
 
   }
+  
 }
