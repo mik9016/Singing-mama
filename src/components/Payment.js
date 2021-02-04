@@ -46,7 +46,7 @@ export default function Payment(props) {
                             const order = await actions.order.capture();
 
                             setPaidFor(true);
-
+                            
                             console.log(order);
                         },
                         
@@ -66,6 +66,7 @@ let lastProduct;
     let Products = [];
     snapshot.forEach(snap => {
       Products.push(snap.val());
+      //setting price
       lastProduct = Products[Products.length - 1].paket
       
       setPrice(lastProduct)

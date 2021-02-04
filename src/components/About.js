@@ -7,26 +7,42 @@ import { Button } from 'react-bootstrap'
 
 export default function About(props) {
   
-    
+  
   
 
     return (
         
         <div className={classes.About}>
             <div className={classes.divek}>
-            <h1>About</h1><br/>
+            <h2>Singen für das Baby</h2><br/>
             <p>
-            Carbohydrates are your body’s main source of energy and your brain’s only source of energy. This energy keeps you thinking clearly and ready to take on your daily routine.<br/>
-
-            To keep your mood and energy levels stable, try to choose complex carbohydrates such as vegetables, legumes (such as chickpeas or lentils), whole grain products, and some fruits, with their skins on if possible. These foods are also an important source of fibre, which helps you feel full for longer and helps food move through your digestive system regularly.<br/>
-
-            Candy, juices and other sugary food and drinks are all forms of simple carbohydrates. You can eat them occasionally, but don’t rely on them to give you energy. They can cause your blood sugar to “spike” and then suddenly drop off, leading to energy slumps during the day.<br/>
-            
+            Dein Baby kann bereits ab der 10. bis 14. Schwangerschaftswoche Geräusche wahrnehmen. In dieser Zeit beginnt die Bildung des Hörnervs. 
+            Lieder, die während der Schwangerschaft wiederholt und lange gesungen werden, merkt sich das Baby und erkennt diese nach der Geburt wieder.
+            Dies schafft eine noch größere Bindung zwischen Mutter und Kind, und dann ist es etwas Vertrautes und Sicheres für das Neugeborene in der neuen Umgebung. 
+            <br/> 
             </p>
+            {/* <h2>Auch etwas für Dich und deinen Körper</h2><br/>
+            <p>
+            Singen erzeugt Glücksgefühle, kann Ängste lösen aber auch fördert die Bildung von Hormonen und Stoffen, die dem Körper gut tun. Es stärkt die Immunabwehr.
+            Singen kann dich ganzheitlich auf die Geburt vorbereiten und es trägt dazu bei, dass du dich im Laufe der Schwangerschaft stets in deinem Körper wohl fühlst. Singen hilft bei Schwangeren gegen Schwindel, Schwäche, Stimmungsschwankungen und Übelkeit sowie Verdauungsprobleme, Atemnot und Erschöpfung.
+            Während der Geburt mit Tönen zu arbeiten gibt dem Körper Kraft. Es hilft, den Schmerz zu lindern und erleichtert dem Baby den Weg. Singend atmest Du tiefer und tiefes Atmen hilft beim Gebären. 
+            <br/> 
+            </p>
+            <h2>Ist es für Mich?</h2><br/>
+            <p>
+            Diese Kurse richten sich an jede Schwangere, jede Frau und jede Mutter. Ob Du bereits Erfahrung im Gesang hast oder nicht, ist dabei unwichtig. Gemeinsam werden Eure persönlichen Singstimmen gestärkt, sodass jede Teilnehmerin innerhalb ihrer Möglichkeiten besser werden kann.
 
-           
+            „Das Lied, das im Herzen der Eltern ruht, singt auf den Lippen der Kinder.” (unbekannt)
+
+            </p>
+            <h3>Wer bin ich?</h3>
+            <p>
+            Dominika Muzykant ist Sängerin, Pianistin und Pädagogin. Absolventin der K.Lipiński Musikakademie in Breslau an der Fakultät für Chorleitung und Dirigieren von Ensembles. Sie hat
+            in viele Musical- ( z.B. ABBA, Winter Wonderland, MichaelJackson) und Jazz- Projekten mitgewirkt. Seit 2018 führt sie das Projekt „Unicat".
+            </p>
+           */}
             
-            </div>
+            </div> 
 
             <br/> 
             <Button 
@@ -34,7 +50,7 @@ export default function About(props) {
             variant="outline-primary" 
             as={Link} to='/pricing' 
             onClick={props.changeNavColorBlack}>
-            Check Our Offer</Button>
+            zum Angebot</Button>
         </div>
     )
 }

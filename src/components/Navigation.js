@@ -18,8 +18,8 @@ const Navigation = (props) => {
       <Navbar.Brand as={Link} to="/home" onClick={props.changeNavColorWhite}>Singing-Mama</Navbar.Brand>
       <Nav className="mr-auto">
       <Nav.Link as={Link} to="/home" onClick={props.changeNavColorWhite} >Home</Nav.Link>
-      <Nav.Link as={Link} to="/about" onClick={props.changeNavColorBlack}>About</Nav.Link>
-      <Nav.Link as={Link} to="/pricing" onClick={props.changeNavColorBlack}>Pricing</Nav.Link>
+      <Nav.Link as={Link} to="/about" onClick={props.changeNavColorBlack}>Über uns</Nav.Link>
+      <Nav.Link as={Link} to="/pricing" onClick={props.changeNavColorBlack}>Angebot</Nav.Link>
       <Nav.Link as={Link} to="/kontakt"onClick={props.changeNavColorBlack}>Kontakt</Nav.Link>
       {/* <Nav.Link as={Link} to="/login" onClick={props.changeNavColorBlack}>Login</Nav.Link> */}
       {/* <Nav.Link as={Link} to="/payment" onClick={props.changeNavColorBlack}>Payment</Nav.Link> */}

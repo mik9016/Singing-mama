@@ -21,7 +21,7 @@ export default function Kontakt(props) {
     const [toPayment, setToPayment] = useState('/kontakt')
     const [modalText, setModalText] = useState('Your message has been sent!')
     const [modalTitle, setModalTitle] = useState('Thank you for contacting us!')
-    
+   
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -138,7 +138,7 @@ export default function Kontakt(props) {
                         </Form.Group>
                         {showDate ? <div >
                             <label>Termin:</label>
-                            <input id="date" type='date'className="form-control" onChange={handleDateInput} required/>
+                            <input id="date" type='datetime-local' className="form-control" onChange={handleDateInput} required/>
                         </div> : null}
 
                         <Form.Group controlId="exampleForm.ControlSelect1">

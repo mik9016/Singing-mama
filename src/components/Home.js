@@ -16,15 +16,15 @@ export default function Home(props) {
             
             <h1>Singing-Mama</h1><br/>
             <p className="lead">
-                Extraordinary way to make childhood of your children beautiful from his/her very first moments.<br/>
-                Make your child sensitive to music from the very beginning.
+            Außergewöhnliche Art,<br/> die Kindheit Ihrer Kinder von Anfang an schön zu machen.<br/>
+            Machen Sie Ihr Kind von Anfang an sensibel für Musik.
             </p>
             
             <NavLink to='/about' 
                 type="button" 
                 className="btn btn-outline-primary"
                 onClick={changeNavColorBlack}> 
-                Learn More
+                Mehr
                 
             </NavLink>           
         

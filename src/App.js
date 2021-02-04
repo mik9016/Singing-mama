@@ -18,7 +18,6 @@ import classes from './App.scss';
 function App(props) {
   const [navStyle, setNavstate] = useState('navbar fixed-top navbar-dark')
   const [navVariant, setNavVariant] = useState('')
-  const [paymentPrice, setPaymentPrice] = useState('')
   const priceItem1 = '10';
   const priceItem2 = '20';
   const priceItem3 = '30';
@@ -82,8 +81,9 @@ function App(props) {
           </Route>
 
         </Switch>
-       <Footer/>
+        {/* <Footer/> */}
       </div>
+     
     </Router>
 
 
