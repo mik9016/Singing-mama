@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Pricing.module.scss'
 import { NavLink } from 'react-router-dom';
+import {Container} from 'react-bootstrap';
 
 export default function Pricing(props) {
 
@@ -68,12 +69,12 @@ export default function Pricing(props) {
 
     </div>
     <div className={classes.Container}>
-    
+     </div>
     </div>
-    <NavLink to='/kontakt' type="button" className="w-25 btn btn-outline-primary" >Termin Vereinbaren</NavLink>
-  </div>
-
- 
+    <Container className="text-center mb-4">
+    <NavLink to='/kontakt' type="button" className=" btn btn-outline-primary" >Termin Vereinbaren</NavLink>
+    </Container>
+   
 </main>
 </div>
     )

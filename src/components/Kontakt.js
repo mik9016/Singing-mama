@@ -107,11 +107,11 @@ export default function Kontakt(props) {
   return (
     <div className={classes.Kontakt}>
       <Container width="100vw" >
-        <Row className="col-md" height="80vh" width="100vw">
-          <Col >
+        <Row className="col-lg" height="80vh" width="100vw">
+          <Col className="col-md">
             <Card.Img src={Picture} alt="Pic" className="img-fluid"/>
           </Col>
-          <Col height="100vh" >
+          <Col height="100vh" className="col-md">
             <Form className={classes.Form} onChange={validateForm}>
               <Card className={classes.Form}>
                 <Card.Header>

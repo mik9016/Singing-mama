@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import classes from "./Home2.module.scss";
 
-export default function Home2() {
+export default function Home2(props) {
   return (
     <div className={classes.Home2}>
       <Card>
@@ -28,6 +28,7 @@ export default function Home2() {
                     to="/about"
                     type="button"
                     className="btn btn-outline-primary"
+                    onClick={props.setToBlack}
                   >
                     Mehr
                   </NavLink>

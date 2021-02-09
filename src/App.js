@@ -18,37 +18,40 @@ import { useState, useEffect, useRef } from "react";
 import classes from "./App.scss";
 
 function App(props) {
-  const [navBg, setNavBg] = useState("");
-  const [navVariant, setNavVariant] = useState("");
+  const [navVariant, setNavVariant] = useState("dark");
   const priceItem1 = "10";
   const priceItem2 = "20";
   const priceItem3 = "30";
 
-
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-     
-      setNavVariant("dark");
-    });
-
-    return () => {
-      window.addEventListener("resize", () => {
-        setNavVariant("dark");
-      });
-    };
-  }, []);
+  function changeColortoBlack() {
+    setNavVariant("light");
+  }
+  function changeColortoWhite() {
+    setNavVariant("dark");
+  }
 
   return (
     <Router>
       <div className={classes.App}>
-        <Navigation variant={navVariant} />
+        <Navigation
+          variant={navVariant}
+          setToBlack={() => {
+            changeColortoBlack();
+          }}
+          setToWhite={() => {
+            changeColortoWhite();
+          }}
+        />
         <Switch>
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
-          <Route path="/home" >
-            <Home2 />
+          <Route path="/home">
+            <Home2
+              setToBlack={() => {
+                changeColortoBlack();
+              }}
+            />
           </Route>
           <Route path="/about">
             <About />

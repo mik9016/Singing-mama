@@ -10,10 +10,10 @@ export default function About(props) {
   return (
     <div className={classes.About}>
       <Container>
-        <Row className="center-block">
+      <Row>
           <Col className=" text-center col-lg m-4 center-block">
             <h1>Mehr über unsere Mission</h1>
-            <Card className="m-4 p-4 text-left center-block">
+            <Card className="m-4 p-4 text-left ">
               <Card.Img variant="top" src={Couple} className="mb-4" />
               <Card.Title className="text-center">
                 <h2>Singen für das Baby</h2>
@@ -132,7 +132,7 @@ export default function About(props) {
               </Container>
             </Card>
           </Col>
-        </Row>
+       </Row>
       </Container>
 
       <br />

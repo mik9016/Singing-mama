@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .Home2 {
-    background-image: url("../assets/greyBelly.jpg");
+    background-image: url("../assets/pregnant.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -20,8 +20,9 @@
     display: none;
   }
   .Container2 {
-    background-color: #F5F5F5;
-    border: solid 1px grey;
+   
+
+    color: #f7f7f7 ;
    
     border-radius: 0.5rem;
     width: 40vw;
@@ -32,8 +33,10 @@
 
 @media screen and (max-width: 575px) {
   .Home2 {
-    background-image: url("../assets/back.jpg");
+    background-image: url("../assets/pregnant.jpg");
     background-size: cover;
+    background-position-x: -40vw;
+   
     
     
   }
@@ -41,6 +44,6 @@
     display: none;
   }
   .Container2 {
-    color: whitesmoke;
+    color: #f7f7f7 ;
   }
 }
