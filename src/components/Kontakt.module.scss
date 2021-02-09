@@ -1,59 +1,10 @@
-@import './Mixins.scss';
-.Kontakt{
-    background-image: url('../assets/together.jpg');
-    height: 100vh;
-    background-size:100vh ;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x:left ;
+@import "./Mixins.scss";
+.Kontakt {
+    margin-top: 4rem;
+}
   
-    h1{
-        text-align: center;
-        margin: 16px;
-    }
-
-    input{
-        align-items: center;
-        margin: 8px;
-        width: 32vw;
-    }
- 
-    textarea{
-        width: 32vw;
-        height:16vh;
-        margin: 32px;
-    }
-}
-
-.Form{
-    display: "flex";
-    flex-direction: "row-reverse";
-    align-items: "center";
-    justify-content: "right";
-}
-.Card{
-    margin: "64px";
-    display: "flex";
-    align-items: "center";
-    justify-content: "right";
-    width: "35vw";
-    border: "none";
-}
-// .CardBod{
-//     width: 50vw;
-   
-    
-// }
-
 // @media screen and (min-width: 576px) and (max-width: 768px) {
-//     .Kontakt{
-//         background-image: url('../assets/together.jpg');
-        
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//     }
 
+    
 
 // }
