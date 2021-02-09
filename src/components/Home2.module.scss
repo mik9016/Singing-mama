@@ -1,0 +1,46 @@
+.Home2 {
+  height: 100vh;
+  background-image: url("../assets/pregnant.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.Col1{
+    display: block;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .Home2 {
+    background-image: url("../assets/greyBelly.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+  .Col1 {
+    display: none;
+  }
+  .Container2 {
+    background-color: #F5F5F5;
+    border: solid 1px grey;
+   
+    border-radius: 0.5rem;
+    width: 40vw;
+    height: 30vh;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .Home2 {
+    background-image: url("../assets/back.jpg");
+    background-size: cover;
+    
+    
+  }
+  .Col1 {
+    display: none;
+  }
+  .Container2 {
+    color: whitesmoke;
+  }
+}

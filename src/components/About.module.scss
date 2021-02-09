@@ -1,43 +1,26 @@
-
- 
-.About{
- 
-    background-image: url('../assets/back.jpg');
-    height: 100vh;
-    background-size:100vh ;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x:right ;
-
-
+.About {
+  text-align: center;
+  margin-top: 2rem;
+  .Container {
+    width: 100vw;
+  }
+  .Row {
+    width: 100vw;
+  }
+  .Button{
+    width: 12rem
     
-       
-.divek{
-   
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  width: 40vw;
-  h2{
-      margin: 16px;
-      margin-top: 64px;
-      padding-left: 128px;
-      padding-top: 128px;
-     
   }
-  p{
-      padding-left: 128px;
-      
-
-  }
-
 }
 
-.but{
-    margin-left: 20vw;
+@media (max-width: 768px) {
+  .About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .Col2 {
+      display: none;
+    }
   }
-    
-
 }
