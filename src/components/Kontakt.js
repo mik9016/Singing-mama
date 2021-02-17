@@ -14,7 +14,6 @@ import firebase from "../firebase";
 import { NavLink } from "react-router-dom";
 import Picture from "../assets/together.jpg";
 
-
 export default function Kontakt(props) {
   const [vorname, setVorname] = useState("");
   const [name, setName] = useState("");
@@ -106,11 +105,16 @@ export default function Kontakt(props) {
 
   return (
     <div className={classes.Kontakt}>
-      <Container width="100vw" >
+      <Container width="100vw">
         <Row className="col-lg" height="80vh" width="100vw">
-          <Col className="col-md">
-            <Card.Img src={Picture} alt="Pic" className="img-fluid"/>
+          <Col className="d-none d-lg-block">
+            <Container className={classes.Picture}>
+              <Col className="col-md">
+                <Card.Img src={Picture} alt="Pic" className="img-fluid-md" />
+              </Col>
+            </Container>
           </Col>
+
           <Col height="100vh" className="col-md">
             <Form className={classes.Form} onChange={validateForm}>
               <Card className={classes.Form}>
@@ -206,7 +210,6 @@ export default function Kontakt(props) {
                   <Form.Control
                     as="textarea"
                     rows="6"
-                    
                     id="message"
                     ref={msgInput}
                     type="text"
@@ -216,54 +219,52 @@ export default function Kontakt(props) {
                   />
                   {error && <Alert variant="danger">{error}</Alert>}
                   <Container className="text-center">
-
-                 
-                  <Button
-                    className="mb-4" 
-                    variant="outline-primary"
-                    onClick={() => {
-                      if (option === "Terminvereinbarung") {
-                        console.log(option);
-                        if (
-                          vorname &&
-                          name &&
-                          email &&
-                          message &&
-                          date !== ""
-                        ) {
-                          setError("");
-                          sendContactForm();
-                          resetFields();
-                          createModalInfo();
-                          setToPayment("/payment");
-                          setModalTitle("Thank you for picking your Termin!");
-                          setModalText(
-                            "You will be forwarded to payment window!"
-                          );
+                    <Button
+                      className="mb-4"
+                      variant="outline-primary"
+                      onClick={() => {
+                        if (option === "Terminvereinbarung") {
+                          console.log(option);
+                          if (
+                            vorname &&
+                            name &&
+                            email &&
+                            message &&
+                            date !== ""
+                          ) {
+                            setError("");
+                            sendContactForm();
+                            resetFields();
+                            createModalInfo();
+                            setToPayment("/payment");
+                            setModalTitle("Thank you for picking your Termin!");
+                            setModalText(
+                              "You will be forwarded to payment window!"
+                            );
+                          } else {
+                            setError("Please fill out all the fields");
+                          }
                         } else {
-                          setError("Please fill out all the fields");
+                          if (
+                            vorname &&
+                            name &&
+                            email &&
+                            message &&
+                            paket &&
+                            option !== ""
+                          ) {
+                            setError("");
+                            sendContactForm();
+                            resetFields();
+                            createModalInfo();
+                          } else {
+                            setError("Please fill out all the fields");
+                          }
                         }
-                      } else {
-                        if (
-                          vorname &&
-                          name &&
-                          email &&
-                          message &&
-                          paket &&
-                          option !== ""
-                        ) {
-                          setError("");
-                          sendContactForm();
-                          resetFields();
-                          createModalInfo();
-                        } else {
-                          setError("Please fill out all the fields");
-                        }
-                      }
-                    }}
-                  >
-                    Submit
-                  </Button>
+                      }}
+                    >
+                      Submit
+                    </Button>
                   </Container>
                 </Card.Body>
               </Card>
