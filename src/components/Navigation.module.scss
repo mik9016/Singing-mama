@@ -3,5 +3,22 @@
 
  
 }
+.NavLayout{
+    margin-left: 57vw;
+        
+}
+
+@media screen and (min-width:769px) and (max-width:1025px){
+    .NavLayout{
+        margin-left: 35vw;
+            
+    }
+}
+@media screen and (max-width:768px){
+    .NavLayout{
+        margin-left: 0vw;
+            
+    }
+}
 
 

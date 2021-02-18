@@ -12,6 +12,7 @@ import Home2 from "./components/Home2";
 import About from "./components/About";
 import Pricing from "./components/Pricing";
 import Kontakt from "./components/Kontakt";
+import Signin from "./components/Signin";
 import TestNav from "./TestNav";
 import Payment from "./components/Payment";
 import { useState, useEffect, useRef } from "react";
@@ -75,6 +76,12 @@ function App(props) {
           </Route>
           <Route path="/payment">
             <Payment />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signin">
+            <Signin />
           </Route>
           <Route path="/testNav">
             <TestNav />
